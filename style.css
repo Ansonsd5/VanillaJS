@@ -1,0 +1,43 @@
+
+.header{
+    width: 100%;
+    background: #fbeaea;
+    box-shadow: 0 4px 8px #d7a6a6;
+    padding: 20px; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.comment-container{
+    padding: 20px; 
+    background-color: azure;
+    width: 100%;
+}
+
+.comment{
+    font-size: 18px;
+    font-family: 600;
+}
+
+.add-comment{
+    font-size: medium;
+    color: blue;
+}
+
+.new-comment-adder{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 0 40px;
+}
+
+.comment-input{
+    width: 50%;
+    background: rgb(162, 221, 162);
+    border:  1px solid gray;
+    padding: 4px 2px;
+}
+
+.comment-input:focus{
+    border:  1px solid rebeccapurple;
+}
