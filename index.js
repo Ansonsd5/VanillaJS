@@ -1,46 +1,60 @@
-let commentConatiner = document.getElementById('comment-conatiner');
+let commentContainer = document.getElementById("comment-container");
+
+{/* <div class="comment-details">
+    <input type="text" placeholder="add text here" class="input" />
+    <button class="btn submit">Submit</button>
+    </div> */}
 
 
-function createInputBox(){
-    let div = document.createElement('div');
-    div.setAttribute('class', 'new-comment-adder');
 
-    div.innerHTML += `
-    <input type="text" class="comment-input" placeholder="Add your comment here">
-            <button type="button" class="submit" role="button">Submit</button>
-`
-return div;
+function createInputBox() {
+  let div = document.createElement("div");
+  div.setAttribute("class", "comment-details");
+
+  div.innerHTML += `
+    <input type="text" placeholder="add text here" class="input" />
+    <button class="btn submit">Submit</button>`;
+
+  return div;
 }
 
-function addComment(text) {
-    let div = document.createElement('div');
-    div.setAttribute('class', 'comment-container');
+{/* <div class="all-comment">
+<div class="card">
+    <span class="text">{text}</span>
+    <span id="reply" class="reply">Add Reply</span>
+</div>
+</div> */}
 
-    div.innerHTML +=`
-    <div class='card'>
-            <div class="comment-text">${text}</div>
-            <div id='add-reply' class="add-reply">Add Reply</div>
-    </div>`
+function addReply(text) {
+  let div = document.createElement("div");
+  div.setAttribute("class", "all-comment");
 
-    return div;
+  div.innerHTML += `
+    <div class="card">
+      <span class="text">${text}</span>
+      <span id="reply" class="reply">
+        Add Reply
+      </span>
+    </div>`;
+
+  return div;
 }
 
-commentConatiner.addEventListener('click', function(e){
-    let replayClicked = e.target.classList.contains('add-reply');
-    let submitCLicked = e.target.classList.contains('submit');
-    let closestCard = e.target.closest(".all-comment");
+commentContainer.addEventListener("click", function (e) {
+  let replyClicked = e.target.classList.contains("reply");
+  let submitClicked = e.target.classList.contains("submit");
+  let closestCard = e.target.closest(".all-comment");
+  
 
-    if(replayClicked){
-        //add input box
-        closestCard.appendChild(createInputBox());
-    }
-    if(submitCLicked){
-        //add new comment
-        const commentDeatils = e.target.closest(".all-comment");
-        if(commentDeatils.children[0].value){
-            closestCard.appendChild(addComment(commentDeatils.children[0].value));
-            commentDeatils.remove();
-        }
+  if (replyClicked) {
+    closestCard.appendChild(createInputBox());
+  }
 
+  if (submitClicked) {
+    const commentDetails = e.target.closest(".comment-details");
+    if (commentDetails.children[0].value) {
+      closestCard.appendChild(addReply(commentDetails.children[0].value));
+      commentDetails.remove();
     }
-})
+  }
+});
