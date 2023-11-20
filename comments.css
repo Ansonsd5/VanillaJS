@@ -1,0 +1,26 @@
+.img{
+    height: 200px;
+    width: 200px;
+    background-color: #dfdfdf;
+}
+
+.comments-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid  #dfdfdf;
+    padding: 16px;
+}
+
+.input-section{
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+}
+
+.user-input{
+    padding: 8px;
+}
+
+#add-reply{
+    cursor: pointer;
+}
