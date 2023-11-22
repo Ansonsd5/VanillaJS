@@ -1,33 +1,59 @@
-.img{
-    height: 200px;
-    width: 200px;
-    background-color: #dfdfdf;
+.img {
+  height: 200px;
+  width: 200px;
+  background-color: #dfdfdf;
 }
 
-.comments-wrapper{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid  #dfdfdf;
-    padding: 16px;
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfdf;
+  padding: 16px;
 }
 
-.input-section{
-    display: flex;
-    gap: 16px;
-    padding: 8px;
+.input-section {
+  display: flex;
+  gap: 16px;
+  margin-left: 2rem;
+}
+.user-input:focus-visible {
+  border: 1px solid rgb(84, 92, 239);
+  outline: greenyellow;
 }
 
-.user-input{
-    padding: 8px;
+input[text] {
+  border: 1px solid rebeccapurple;
 }
 
-#add-reply{
-    cursor: pointer;
+.user-input {
+  padding: 8px;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    background: rgb(206, 206, 246);
-    padding: 1rem;
+#add-reply {
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgb(206, 206, 246);
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 14px #0633f956 inset;
+}
+
+.card > .add-reply {
+  color: rgb(84, 92, 239);
+}
+.all-comments {
+  margin-left: 1rem;
+}
+
+.replybtn {
+  padding: 0.5rem 1.5rem;
+  color: rgb(84, 92, 239);
+  border-radius: 0.25rem;
+  border: solid 1px rebeccapurple;
+  background-color: #0633f956;
 }
