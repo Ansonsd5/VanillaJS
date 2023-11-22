@@ -24,3 +24,10 @@
 #add-reply{
     cursor: pointer;
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background: rgb(206, 206, 246);
+    padding: 1rem;
+}

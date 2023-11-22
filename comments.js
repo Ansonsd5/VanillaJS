@@ -36,7 +36,6 @@ commentContainer.addEventListener('click',function(e){
     }
 
     if(replyBtn){
-        console.log("its");
         const commentDeatils = e.target.closest(".input-section");
         if(commentDeatils.children[0].value){
             closestCard.appendChild(commentAdder(commentDeatils.children[0].value));
