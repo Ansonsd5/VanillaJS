@@ -1,59 +1,22 @@
-.img {
-  height: 200px;
-  width: 200px;
-  background-color: #dfdfdf;
-}
-
-.comments-wrapper {
+.main-section{
   display: flex;
   flex-direction: column;
-  border: 1px solid #dfdfdf;
-  padding: 16px;
-}
+  align-items: center;
+  justify-content: center;
 
-.input-section {
+}
+.card{
   display: flex;
-  gap: 16px;
-  margin-left: 2rem;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 50%, 0.563);
+  padding: 1rem;
+  border-radius: .5rem;
 }
-.user-input:focus-visible {
-  border: 1px solid rgb(84, 92, 239);
-  outline: greenyellow;
-}
-
-input[text] {
-  border: 1px solid rebeccapurple;
-}
-
-.user-input {
-  padding: 8px;
-}
-
-#add-reply {
+.card .addreplay{
+  color: rgb(127, 2, 251);
   cursor: pointer;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  background: rgb(206, 206, 246);
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 0.25rem;
-  box-shadow: 0px 2px 14px #0633f956 inset;
-}
-
-.card > .add-reply {
-  color: rgb(84, 92, 239);
-}
-.all-comments {
-  margin-left: 1rem;
-}
-
-.replybtn {
-  padding: 0.5rem 1.5rem;
-  color: rgb(84, 92, 239);
-  border-radius: 0.25rem;
-  border: solid 1px rebeccapurple;
-  background-color: #0633f956;
+.input-wrapper{
+  padding: 0.5rem;
 }

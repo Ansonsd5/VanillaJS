@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nested comments</title>
-    <link rel="stylesheet" href="comments.css" />
-  </head>
-  <body>
-    <section class="img-comments">
-      <div class="img" role="img"></div>
-      <div class="comment-conatiner" id="comment-conatiner">
-        <div class="all-comments" id="all-comments">
-          <div class="card">
-            <span class="comment">This is the first comment</span>
-            <span class="add-reply" id="add-reply">Add reply</span>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nested comments</title>
+  <link rel="stylesheet" href="comments.css">
+</head>
+<body>
+  <section class="main-section">
+    <h3>Nested comments</h3>
+    <div class="all-comments" id="all-comments">
+      <div class="card">
+        <span>This is the First comment</span>
+        <span class="addreplay">Add Reply</span>
       </div>
-    </section>
-    <script src="comments.js"></script>
-  </body>
+    </div>
+
+    <div class="input-wrapper">
+      <input class="userInput" type="text" placeholder="Enter your comment"  />
+      <button class="Submit">Submit</button>
+    </div>
+  </section>
+  
+  <script src="comments.js"></script>
+</body>
 </html>

@@ -1,41 +1,14 @@
-const commentContainer = document.getElementById("comment-conatiner");
+const allComments = document.getElementById("all-comments");
 
-function createInput() {
-  let div = document.createElement("div");
-  div.setAttribute("class", "input-section");
+
+function addReply(e){
+  let div = document.createElement('div');
+  div.setAttribute('class',"card");
+
   div.innerHTML += `
-    <input class="user-input" id="user-input" type="text" />
-    <button class="replybtn" id="replybtn">Reply</button>
-    `;
+  <span>This is the First comment</span>
+  <span class="addreplay">Add Reply</span>`
+
   return div;
 }
 
-function commentAdder(userInput) {
-  let div = document.createElement("div");
-  div.setAttribute("class", "all-comments");
-
-  div.innerHTML += `
-    <div class="card">
-                <span class="comment">${userInput}</span>
-                <span class="add-reply" id="add-reply">Add reply</span>
-            </div>`;
-  return div;
-}
-
-commentContainer.addEventListener("click", function (e) {
-  let addReply = e.target.classList.contains("add-reply");
-  let replyBtn = e.target.classList.contains("replybtn");
-  let closestCard = e.target.closest(".all-comments");
-
-  if (addReply) {
-    closestCard.appendChild(createInput());
-  }
-
-  if (replyBtn) {
-    const commentDeatils = e.target.closest(".input-section");
-    if (commentDeatils.children[0].value) {
-      closestCard.appendChild(commentAdder(commentDeatils.children[0].value));
-      commentDeatils.remove();
-    }
-  }
-});
