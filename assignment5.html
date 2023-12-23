@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    details {
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      font-weight: bold;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    details div {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 5s ease-in-out;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    details[open] div {
+      max-height: 200px; /* Adjust this value based on your content */
+    }
+  </style>
+</head>
+<body>
+
+  <details>
+    <summary>Accordion 1</summary>
+    <div>
+      <p>Your content goes here. This can include text, images, or other HTML elements.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Accordion 2</summary>
+    <div>
+      <p>More content for the second accordion.</p>
+    </div>
+  </details>
+
+</body>
+</html>
